@@ -5,10 +5,6 @@ var ringInput = document.getElementById("ring");
 submit.addEventListener("click", checkPeck);
 function checkPeck() {
 	if(checkInputValid()) {
-		  function play(){
-       var audio = document.getElementById("audio");
-       audio.play();
-                 }
 		var i = parseFloat(indexInput.value).toFixed(2);
 		var r = parseFloat(ringInput.value).toFixed(2);
 		var divided = i / r;
