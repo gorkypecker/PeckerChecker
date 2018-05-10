@@ -2,6 +2,8 @@ var results = document.getElementById("peck-results");
 var submit = document.getElementById("submit");
 var indexInput = document.getElementById("index");
 var ringInput = document.getElementById("ring");
+var aud = document.querySelector("audio");
+aud.play();
 submit.addEventListener("click", checkPeck);
 function checkPeck() {
 	if(checkInputValid()) {
