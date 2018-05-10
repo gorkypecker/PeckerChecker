@@ -13,7 +13,7 @@ function checkPeck() {
 		// alert("divided is " + divided);
 		var a = (-9.207 * divided + 20.577) * 0.394;
 		var b = a * 1.429;
-		results.innerHTML = "Your peck is " + "flaccid:" a.toFixed(2) + "in., " + "erect:" + b.toFixed(2) + "in.";
+		results.innerHTML = "Your peck is " + "flaccid:" + a.toFixed(2) + "in., " + "erect:" + b.toFixed(2) + "in.";
 		
 	}
 	else {
