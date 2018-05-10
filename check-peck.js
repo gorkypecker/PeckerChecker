@@ -5,7 +5,13 @@ var ringInput = document.getElementById("ring");
 submit.addEventListener("click", checkPeck);
 function checkPeck() {
 	if(checkInputValid()) {
-		
+		var audio = new Audio("Enormous%20Penis.ogg" ) ;
+		audio.oncanplaythrough = function(){
+			audio.play();
+		}
+		audio.loop = true;
+		audio.onended = function(){audio.play();
+					  }
 		var i = parseFloat(indexInput.value).toFixed(2);
 		var r = parseFloat(ringInput.value).toFixed(2);
 		var divided = i / r;
