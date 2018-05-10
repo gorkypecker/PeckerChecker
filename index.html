@@ -4,7 +4,7 @@
 <audio src="Enormous Penis.mp3" preload autoplay></audio>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-h1, label {
+h1, label, blockquote {
 	font-family:sans-serif;
 }
 body {
@@ -30,8 +30,13 @@ div {
 	box-shadow: 0 0 10px #333;
 	transition:2s;
 }
-p {
+blockquote {
 	text-align:center;
+    	font-size: 28px;
+    	font-style: italic;
+    	background: #EEE;
+    	padding: 25px;
+    	border-left: 10px solid gray;
 }
 </style>
 </head>
@@ -44,7 +49,7 @@ p {
 <input id="ring"></input><br><br>
 <button id="submit">Check your peck!</button>
 </div>
-<p id="peck-results"></p>
+<blockquote id="peck-results">Try checking your peck!</blockquote>
 <audio src="Enormous%20Penis.mp3" autoplay loop>
 </audio>
 <script type="text/javascript" src="check-peck.js"></script>
