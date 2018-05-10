@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Pecker Checker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1, label {
+	font-family:sans-serif;
+}
+body {
+	padding:30px;
+}
+h1 {
+	text-align: center;
+	font-style:italic;
+}
+div {
+	text-align:center;
+}
+#submit {
+	border:1px solid #666;
+	padding:15px;
+	border-radius:0px;
+	background-color:white;
+	font-weight:bold;
+	
+	transition:2s;
+}
+#submit:hover {
+	box-shadow: 0 0 10px #333;
+	transition:2s;
+}
+p {
+	text-align:center;
+}
+</style>
+</head>
+<body>
+<h1>The smart way to check your peck</h1>
+<div>
+<label for="index">Index finger length (in.):</label><br />
+<input id="index"></input><br /><br />
+<label for="ring">Ring finger length (in.):</label><br />
+<input id="ring"></input><br><br>
+<button id="submit">Check your peck!</button>
+</div>
+<p id="peck-results"></p>
+<script type="text/javascript" src="check-peck.js"></script>
+</body>
+</html>
