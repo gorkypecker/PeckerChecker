@@ -16,9 +16,9 @@ function checkPeck() {
 		// alert("divided is " + divided);
 		var a = (-9.207 * divided + 20.577) * 0.394;
 		var b = a * 1.429;
-		if(b >= 7) {aud.play();}
-		else if(b >= 6) {audOne.play();}
-		else if(b < 6) {audTwo.play();}
+		if(b >= 7) {aud.play(); audOne.stop(); audTwo.stop(); }
+		else if(b >= 6) {audOne.play(); aud.stop(); audTwo.stop();}
+		else if(b < 6) {audTwo.play(); audOne.stop(); aud.stop();}
 		results.innerHTML = "Your peck is <b>" + a.toFixed(2) + "in.</b> flaccid, <b>" + b.toFixed(2) + "in.</b> erect.";
 		
 	}
