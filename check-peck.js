@@ -37,7 +37,7 @@ function checkInputValid() {
 	return true;
 }
 
-function stopAudio(var a) {
+function stopAudio(a) {
 	a.pause();
 	a.currentTime = 0;
 }
