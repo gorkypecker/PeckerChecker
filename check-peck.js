@@ -5,7 +5,6 @@ var ringInput = document.getElementById("ring");
 var aud = document.getElementById("audio");
 var audOne = document.getElementById("audioOne");
 var audTwo = document.getElementById("audioTwo");
-var firstClick = true;
 submit.addEventListener("click", checkPeck);
 function checkPeck() {
 	if(checkInputValid()) {
@@ -17,15 +16,9 @@ function checkPeck() {
 		// alert("divided is " + divided);
 		var a = (-9.207 * divided + 20.577) * 0.394;
 		var b = a * 1.429;
-		if (firstClick) {
-			if(b >= 7)
-			{aud.play();}
-			if(b >= 6 && b <7)
-			{audOne.play();}
-			if(b < 6)
-			{audTwo.play();}
-			firstClick = false;
-		}
+		if(b >= 7) {aud.play();}
+		else if(b >= 6) {audOne.play();}
+		else if(b < 6) {audTwo.play();}
 		results.innerHTML = "Your peck is <b>" + a.toFixed(2) + "in.</b> flaccid, <b>" + b.toFixed(2) + "in.</b> erect.";
 		
 	}
