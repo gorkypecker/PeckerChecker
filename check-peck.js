@@ -2,9 +2,9 @@ var results = document.getElementById("peck-results");
 var submit = document.getElementById("submit");
 var indexInput = document.getElementById("index");
 var ringInput = document.getElementById("ring");
-var aud = document.querySelector("audio");
-var audOne = document.querySelector("audioOne");
-var audTwo = document.querySelector("audioTwo");
+var aud = document.querySelector("#audio");
+var audOne = document.querySelector("#audioOne");
+var audTwo = document.querySelector("#audioTwo");
 var firstClick = true;
 submit.addEventListener("click", checkPeck);
 function checkPeck() {
