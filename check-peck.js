@@ -16,9 +16,9 @@ function checkPeck() {
 		// alert("divided is " + divided);
 		var a = (-9.207 * divided + 20.577) * 0.394;
 		var b = a * 1.429;
-		if(b >= 7) {aud.play(); audOne.stop(); audTwo.stop(); }
-		else if(b >= 6) {audOne.play(); aud.stop(); audTwo.stop();}
-		else if(b < 6) {audTwo.play(); audOne.stop(); aud.stop();}
+		if(b >= 7) {aud.play(); stopAudio(audOne); stopAudio(audTwo); }
+		else if(b >= 6) {audOne.play(); stopAudio(aud); stopAudio(audTwo); }
+		else if(b < 6) {audTwo.play(); stopAudio(audOne); stopAudio(aud); }
 		results.innerHTML = "Your peck is <b>" + a.toFixed(2) + "in.</b> flaccid, <b>" + b.toFixed(2) + "in.</b> erect.";
 		
 	}
@@ -35,4 +35,9 @@ function checkInputValid() {
 		return false;
 	}
 	return true;
+}
+
+function stopAudio(var a) {
+	a.pause();
+	a.currentTime = 0;
 }
